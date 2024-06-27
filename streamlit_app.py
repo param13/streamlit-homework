@@ -59,16 +59,10 @@ if total_profit > 0:
     profit_margin = round(total_profit / total_sales * 100, 2) 
 else:
     profit_margin = 0
-col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.metric("Total Sales", f"${total_sales}")
-    
-with col2:
-    st.metric("Total Profit", f"${total_profit}")
-    
-with col3:
-    st.metric("Profit Margin (%)", f"{profit_margin}%")
+st.metric("Total Sales", f"${total_sales}")
+st.metric("Total Profit", f"${total_profit}")
+st.metric("Profit Margin (%)", f"{profit_margin}%")
 
 st.write("### (5) use the delta option in the overall profit margin metric to show the difference between the overall average profit margin (all products across all categories)")
     
